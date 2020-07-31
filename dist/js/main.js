@@ -8,7 +8,7 @@ const navItems = document.querySelectorAll(".nav-item");
 //set the initial state of the menu to false
 let showMenu = false;
 
-menuBtn.addEventListener('click', toggleMenu);
+menuBtn.addEventListener("click", toggleMenu);
 
 function toggleMenu() {
   if (!showMenu) {
@@ -17,7 +17,7 @@ function toggleMenu() {
     menuNav.classList.add("show");
     menuBranding.classList.add("show");
 
-    navItems.forEach(item => {
+    navItems.forEach((item) => {
       item.classList.add("show");
     });
 
@@ -29,7 +29,7 @@ function toggleMenu() {
     menuNav.classList.remove("show");
     menuBranding.classList.remove("show");
 
-    navItems.forEach(item => {
+    navItems.forEach((item) => {
       item.classList.remove("show");
     });
 

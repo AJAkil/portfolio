@@ -1,5 +1,5 @@
-$primary-color: rgba(121, 160, 233, 0.411);
-$secondary-color: rgba(6, 72, 88, 0.795);
+$primary-color: rgba(44, 102, 240, 0.411);
+$secondary-color: rgb(250, 250, 250);
 $show-home-image: true;
 $home-image: url(../img/bgg.jpg);
 $background-opacity: 0.2;
@@ -28,4 +28,36 @@ $background-opacity: 0.2;
   }
 }
 
+// Set text color
+@function set-text-color($color) {
+  @if (lightness($color) > 40) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}
+
 //MEDIA query mixin
+@mixin mediaSm {
+  @media screen and (max-width: 500px) {
+    @content;
+  }
+}
+
+@mixin mediaMd {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mediaLg {
+  @media screen and (min-width: 769px) and (max-width: 1170px) {
+    @content;
+  }
+}
+
+@mixin mediaXl {
+  @media screen and (min-width: 1171px) {
+    @content;
+  }
+}

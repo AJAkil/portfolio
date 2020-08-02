@@ -40,14 +40,14 @@
   .menu-nav {
     margin: 0;
     padding: 0;
-    background: #009caa;
+    background: #1d222a;
     list-style: none;
     transform: translate3d(0, 100%, 0);
     transition: all 0.3s ease-in; }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
   .menu-branding {
-    background-color: #006d77;
+    background-color: #1c2129;
     transform: translate3d(0, -100%, 0);
     transition: all 0.3s ease-in; }
     .menu-branding.show {
@@ -57,14 +57,14 @@
       height: 250px;
       background: url(../img/portrait.jpg);
       border-radius: 50%;
-      border: solid 6px #cedbda; }
+      border: solid 6px #ffc400e7; }
   .menu .nav-item {
     transform: translate3d(600px, 0, 0);
     transition: all 0.3s ease-in; }
     .menu .nav-item.show {
       transform: translate3d(0, 0, 0); }
     .menu .nav-item.current > a {
-      color: #cedbda; }
+      color: #ffc400e7; }
   .menu .nav-link {
     display: inline;
     position: relative;
@@ -76,7 +76,7 @@
     text-decoration: none;
     transition: all 0.3s ease-in; }
     .menu .nav-link:hover {
-      color: #cedbda; }
+      color: #ffc400e7; }
 
 .nav-item:nth-child(1) {
   transition-delay: 0.075s; }
@@ -94,7 +94,7 @@
   box-sizing: border-box; }
 
 body {
-  background: #006d77;
+  background: #1d222a;
   color: #fff;
   height: 100%;
   margin: 0;
@@ -112,13 +112,14 @@ body {
       width: 100%;
       height: 100%;
       z-index: -1;
-      background: rgba(0, 109, 119, 0.2); }
+      background: rgba(29, 34, 42, 0.4); }
 
 h1,
 h2,
 h3 {
   margin: 0;
-  font-weight: 475; }
+  font-weight: 475;
+  text-align: center; }
   h1.lg-heading,
   h2.lg-heading,
   h3.lg-heading {
@@ -139,7 +140,7 @@ header {
   width: 100%; }
 
 .text-secondary {
-  color: #cedbda; }
+  color: #ffc400e7; }
 
 main {
   padding: 4rem;
@@ -149,12 +150,14 @@ main {
     main#home h1 {
       margin-top: 20vh; }
   main .icons {
-    margin-top: 1rem; }
+    margin-top: 1rem;
+    text-align: center; }
     main .icons a {
-      padding: 0.5rem; }
+      padding: 0.5rem;
+      transition: all 0.3s ease-in; }
       main .icons a:hover {
-        color: #cedbda;
-        transition: all 0.3s ease-in; }
+        color: #ffc400e7;
+        padding: 0.5rem 1.5rem; }
 
 .about-info {
   display: grid;
@@ -165,10 +168,11 @@ main {
     grid-area: bioimage;
     margin: auto;
     border-radius: 50%;
-    border: #cedbda 3px solid; }
+    border: #ffc400e7 3px solid; }
   .about-info .bio {
     grid-area: bio;
-    font-size: 1.5rem; }
+    font-size: 1.5rem;
+    text-align: justify; }
   .about-info .job-1 {
     grid-area: job1; }
   .about-info .job-2 {
@@ -176,9 +180,9 @@ main {
   .about-info .job-3 {
     grid-area: job3; }
   .about-info .job {
-    background: #007681;
+    background: #212730;
     padding: 0.5rem;
-    border-bottom: #cedbda 5px solid;
+    border-bottom: #ffc400e7 5px solid;
     text-align: center; }
 
 .projects {
@@ -190,7 +194,7 @@ main {
     border: 3px #fff solid; }
     .projects img:hover {
       opacity: 0.5;
-      border-color: #cedbda;
+      border-color: #ffc400e7;
       transition: all 0.3s ease-in; }
 
 .boxes {
@@ -207,7 +211,7 @@ main {
     transition: all 0.3s ease-in; }
     .boxes div:hover {
       padding: 0.5rem 1.5rem;
-      background: #cedbda;
+      background: #ffc400e7;
       color: #000; }
       .boxes div:hover span {
         color: #000; }
@@ -218,23 +222,23 @@ main {
   border: 0;
   margin-bottom: 0.3rem; }
   .btn:hover, .btn-dark:hover, .btn-light:hover {
-    background: #cedbda;
+    background: #ffc400e7;
     color: #000; }
 
 .btn-dark {
   background: black;
-  color: #333; }
+  color: #fff; }
 
 .btn-light {
-  background: #11ebff;
+  background: #a1acbe;
   color: #333; }
 
 #main-footer {
   text-align: center;
   padding: 1rem;
-  background: #005f68;
+  background: #080a0c;
   color: #fff;
-  height: 40px; }
+  height: 60px; }
 
 @media screen and (min-width: 1171px) {
   .projects {
@@ -277,7 +281,12 @@ main {
     grid-template-columns: repeat(2, 1fr); } }
 
 @media screen and (max-width: 500px) {
-  main#home h1 {
-    margin-top: 10vh; }
+  main {
+    padding: 2rem; }
+    main #home h1 {
+      margin-top: 10vh; }
+    main .lg-heading {
+      margin-top: 1rem;
+      font-size: 5rem; }
   .projects {
     grid-template-columns: 1fr; } }
